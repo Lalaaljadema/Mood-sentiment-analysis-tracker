@@ -11,3 +11,13 @@ def mood_analyzer(diaries):
             negative[f"day{nr}"] = score["neg"]
     return positive, negative
 
+
+def mood_of_the_day(text):
+    analyzer = SentimentIntensityAnalyzer()
+    score = analyzer.polarity_scores(text)
+    if text:
+        if score['pos'] > score['neg']:
+            return ("You look amazing!")
+        else:
+            return ("Are you okay?")
+
