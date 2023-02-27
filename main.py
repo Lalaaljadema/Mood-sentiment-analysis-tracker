@@ -12,7 +12,7 @@ for file in files:
         diaries.append(diary.rstrip('\n'))
 
 p,n = mood_analyzer(diaries)
-date = [name.strip(".txt").strip("diary/") for name in files]
+date = [name.strip(".txt").strip("diary/").lstrip('\\') for name in files]
 positive = list(p.values())
 negative = list(n.values())
 figure1 = px.line(x = date, y = positive,
