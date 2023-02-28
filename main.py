@@ -2,6 +2,8 @@ import streamlit as st
 import glob
 from sentiment_analyzer import mood_analyzer, mood_of_the_day
 import plotly.express as px
+import os
+import datetime
 
 files = sorted(glob.glob("diary/*.txt"))
 
@@ -26,10 +28,11 @@ st.subheader("Positivity")
 st.plotly_chart(figure1)
 st.subheader("Negativity")
 st.plotly_chart(figure2)
-text= st.text_input("What's on your mind?")
 
-result = mood_of_the_day(text)
-if result:
-    st.info(result)
+
+
+
+
+
 
 
