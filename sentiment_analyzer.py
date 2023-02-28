@@ -19,5 +19,5 @@ def mood_of_the_day(text):
         if score['pos'] > score['neg']:
             return ("You look amazing!")
         else:
-            return ("Are you okay?")
+            return ("It's okay to feel not okay! everything will be fine!")
 
